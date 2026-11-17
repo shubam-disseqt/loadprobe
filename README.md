@@ -1,9 +1,4 @@
-# loadprobe
-
 HTTP load-testing CLI built on [autocannon](https://github.com/mcollina/autocannon).
-It gives an honest pass/fail verdict, finds your breaking point with ramp-up stages, and returns exit codes your CI can use.
-
-> Only test servers you own or have permission to test.
 
 ## Setup
 
@@ -43,9 +38,3 @@ Run `npm start -- --help` for all options.
 - **Pass/fail** uses `--max-error-rate` (default 1%) and `--max-p99` (default 1000ms).
 - **Exit codes:** `0` = all stages passed, `1` = a stage failed, `2` = bad input.
 
-## Development
-
-```bash
-npm test          # unit tests (node:test)
-npm run typecheck
-```
