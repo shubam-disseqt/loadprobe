@@ -16,18 +16,16 @@ npm install
 ## Usage
 
 ```bash
-# 10 connections for 10s
-npm start -- http://localhost:3000
+npm start -- <url> -c <connections> -d <seconds>
+```
 
-# Ramp up: 10 -> 50 -> 200 connections, 15s each; stops at the first failing stage
-npm start -- http://localhost:3000/api -c 10,50,200 -d 15
+- `-c` = number of connections (simultaneous users). Default 10.
+- `-d` = how many seconds to run. Default 10.
 
-# POST with auth header and JSON body (or -b @payload.json)
-npm start -- http://localhost:3000/login -m POST \
-  -H "Authorization: Bearer $TOKEN" -b '{"user":"demo"}'
+Example: 100 connections for 30 seconds
 
-# CI: custom thresholds, JSON output, non-zero exit on failure
-npm start -- http://staging/api --max-error-rate 0.5 --max-p99 300 --json > result.json
+```bash
+npm start -- http://localhost:3000 -c 100 -d 30
 ```
 
 Run `npm start -- --help` for all options.
