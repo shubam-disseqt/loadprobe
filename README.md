@@ -28,6 +28,12 @@ Example: 100 connections for 30 seconds
 npm start -- http://localhost:3000 -c 100 -d 30
 ```
 
+Stress test: find the breaking point by ramping up 10 → 50 → 200 → 500 connections, 15 seconds each. It stops at the first stage that fails.
+
+```bash
+npm start -- http://localhost:3000 -c 10,50,200,500 -d 15
+```
+
 Run `npm start -- --help` for all options.
 
 ## How results are judged
