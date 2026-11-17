@@ -1,0 +1,24 @@
+{
+  "name": "loadprobe",
+  "version": "0.1.0",
+  "description": "HTTP load testing CLI with honest pass/fail, ramp-up and CI exit codes",
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "autocannon": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/autocannon": "^7.12.7",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
