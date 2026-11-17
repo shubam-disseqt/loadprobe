@@ -1,12 +1,6 @@
 HTTP load-testing CLI built on [autocannon](https://github.com/mcollina/autocannon).
 
-## Setup
 
-Requires Node 22.18+ (runs TypeScript directly, no build step).
-
-```bash
-npm install
-```
 
 ## Usage
 
